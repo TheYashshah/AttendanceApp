@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
+    <EditText
+        android:layout_width="match_parent"
+        android:textSize="50dp"
+        android:text="Hello World !!!"
+        android:layout_height="match_parent">
+
+    </EditText>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

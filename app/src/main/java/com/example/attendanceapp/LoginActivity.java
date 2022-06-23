@@ -15,6 +15,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.attendanceapp.bean.FacultyBean;
+import com.example.attendanceapp.context.ApplicationContext;
+import com.example.attendanceapp.db.DBAdapter;
+
 public class LoginActivity extends AppCompatActivity {
 
     Button login;
@@ -79,6 +83,7 @@ public class LoginActivity extends AppCompatActivity {
                         if(user_name.equals("admin") & pass_word.equals("admin123")){
                             Intent intent =new Intent(LoginActivity.this,MainActivity.class);
                             startActivity(intent);
+                            finish();
                             Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();
                         }else{
                             Toast.makeText(getApplicationContext(), "Login failed", Toast.LENGTH_SHORT).show();
@@ -99,16 +104,16 @@ public class LoginActivity extends AppCompatActivity {
                     {
                         password.setError("enter password");
                     }
-//                    DBAdapter dbAdapter = new DBAdapter(LoginActivity.this);
-//                    FacultyBean facultyBean = dbAdapter.validateFaculty(user_name, pass_word);
+                    DBAdapter dbAdapter = new DBAdapter(LoginActivity.this);
+                    FacultyBean facultyBean = dbAdapter.validateFaculty(user_name, pass_word);
 
-//                    if(facultyBean!=null)
-//                    {
-//                        Intent intent = new Intent(LoginActivity.this,AddAttandanceSessionActivity.class);
-//                        startActivity(intent);
-//                        ((ApplicationContext)LoginActivity.this.getApplicationContext()).setFacultyBean(facultyBean);
-//                        Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();
-//                    }
+                    if(facultyBean!=null)
+                    {
+                        Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                        startActivity(intent);
+                        ((ApplicationContext)LoginActivity.this.getApplicationContext()).setFacultyBean(facultyBean);
+                        Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();
+                    }
                     else
                     {
                         Toast.makeText(getApplicationContext(), "Login failed", Toast.LENGTH_SHORT).show();
