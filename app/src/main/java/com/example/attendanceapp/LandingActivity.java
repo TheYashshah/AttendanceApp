@@ -17,7 +17,7 @@ public class LandingActivity extends AppCompatActivity {
 
         new Timer().schedule(new TimerTask(){
             public void run() {
-                startActivity(new Intent(LandingActivity.this, MainActivity.class));
+                startActivity(new Intent(LandingActivity.this, LoginActivity.class));
                 finish();
             }
         }, 1000 );
