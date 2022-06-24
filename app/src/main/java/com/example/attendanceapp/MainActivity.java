@@ -29,18 +29,18 @@ public class MainActivity extends AppCompatActivity {
         img1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(MainActivity.this,RegisterActivity.class);
+                Intent intent =new Intent(MainActivity.this,ViewStudentActivity.class);
                 startActivity(intent);
-                Toast.makeText(MainActivity.this, "You on stundet Side...", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, "You on stundet Side...", Toast.LENGTH_SHORT).show();
             }
         });
 
         img2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(MainActivity.this,RegisterActivity.class);
+                Intent intent =new Intent(MainActivity.this,ViewFacultyActivity.class);
                 startActivity(intent);
-                Toast.makeText(MainActivity.this, "You on teacher Side...", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, "You on teacher Side...", Toast.LENGTH_SHORT).show();
             }
         });
 
