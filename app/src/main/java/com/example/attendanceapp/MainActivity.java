@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 addstudent.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent intent =new Intent(MainActivity.this,RegisterActivity.class);
+                        Intent intent =new Intent(MainActivity.this,AddStudentActivity.class);
                         startActivity(intent);
                         Toast.makeText(MainActivity.this, "Add stundet Side...", Toast.LENGTH_SHORT).show();
                     }
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 addteacher.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent intent =new Intent(MainActivity.this,RegisterActivity.class);
+                        Intent intent =new Intent(MainActivity.this,AddFacultyActivity.class);
                         startActivity(intent);
                         Toast.makeText(MainActivity.this, "Add Teacher Side...", Toast.LENGTH_SHORT).show();
                     }

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddStudentActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/textViewFormName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Add Student"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textViewFormName"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:text="First Name"
+            android:textColor="@android:color/black" />
+
+        <requestFocus />
+
+        <EditText
+            android:id="@+id/editTextFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textViewFirstName"
+            android:ems="10"
+            android:hint="First Name"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textViewLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editTextFirstName"
+            android:layout_below="@+id/editTextFirstName"
+            android:layout_marginTop="15dp"
+            android:textSize="15sp"
+            android:text="Last Name"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/editTextLastName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@+id/textViewLastName"
+            android:layout_below="@+id/textViewLastName"
+            android:ems="10"
+            android:hint="Last Name"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textViewPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextLastName"
+            android:layout_marginTop="15dp"
+            android:textSize="15sp"
+            android:text="Contact"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textViewPhone"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="Contact No"
+            android:inputType="phone" />
+
+        <TextView
+            android:id="@+id/textViewUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editTextPhone"
+            android:layout_below="@+id/editTextPhone"
+            android:layout_marginTop="15dp"
+            android:textSize="15sp"
+            android:text="Enrollment"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/editTextaddr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textViewUserName"
+            android:layout_alignParentRight="true"
+            android:ems="10"
+            android:hint="Enrollment" />
+
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/editTextaddr"
+            android:text="Select dept"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black" />
+
+        <Spinner
+            android:id="@+id/spinnerdept"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textView1"
+            android:layout_alignParentLeft="true"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerdept"
+            android:layout_marginTop="10dp"
+            android:text="Select year"
+            android:textSize="15sp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black" />
+
+        <Spinner
+            android:id="@+id/spinneryear"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textView2"
+            android:textColor="@android:color/black"
+            android:layout_toRightOf="@+id/textViewPassword" />
+
+        <Button
+            android:id="@+id/RegisterButton"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/spinneryear"
+            android:layout_marginTop="15dp"
+            android:text="submit"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/Cancel_Button"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/MessageforRegister"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="18dp"
+            android:text="cancle"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/MessageforRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RegisterButton"
+            android:layout_marginTop="54dp"
+            android:layout_toRightOf="@+id/textViewUserName"
+            android:text=""
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/textViewPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textViewUserName"
+            android:layout_marginTop="14dp"
+            android:text=""
+            android:textColor="@android:color/black" />
+
+    </RelativeLayout>
+
+</ScrollView>
