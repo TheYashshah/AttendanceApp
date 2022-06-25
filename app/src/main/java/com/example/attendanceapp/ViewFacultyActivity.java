@@ -37,10 +37,10 @@ public class ViewFacultyActivity extends AppCompatActivity {
 
         for(FacultyBean facultyBean : facultyBeanList)
         {
-            String users = " Name : " + facultyBean.getFaculty_firstname()+ facultyBean.getFaculty_lastname();
+            String faculty = " Name : " + facultyBean.getFaculty_firstname()+ facultyBean.getFaculty_lastname();
 
-            facultyList.add(users);
-            Log.d("users: ", users);
+            facultyList.add(faculty);
+            Log.d("faculty: ", faculty);
 
         }
 

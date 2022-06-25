@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         img1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(MainActivity.this,ViewStudentActivity.class);
+                Intent intent =new Intent(MainActivity.this,ViewStudentBranchActivity.class);
                 startActivity(intent);
 //                Toast.makeText(MainActivity.this, "You on stundet Side...", Toast.LENGTH_SHORT).show();
             }

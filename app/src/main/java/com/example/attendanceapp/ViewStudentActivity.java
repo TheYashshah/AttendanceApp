@@ -20,9 +20,11 @@ import java.util.ArrayList;
 
 public class ViewStudentActivity extends AppCompatActivity {
 
-    ArrayList<StudentBean> studentBeanlist;
+    ArrayList<StudentBean> studentBeanList;
     private ListView listView ;
     private ArrayAdapter<String> listAdapter;
+    String branch;
+    String year;
 
     DBAdapter dbAdapter = new DBAdapter(this);
 
@@ -32,55 +34,58 @@ public class ViewStudentActivity extends AppCompatActivity {
         setContentView(R.layout.__listview_main);
 
         listView=(ListView)findViewById(R.id.listview);
-        final ArrayList<String> studentlist = new ArrayList<String>();
+        final ArrayList<String> studentList = new ArrayList<String>();
 
-        studentBeanlist=dbAdapter.getAllStudent();
+        branch=getIntent().getExtras().getString("branch");
+        year =getIntent().getExtras().getString("year");
 
-        for(StudentBean studentBean : studentBeanlist)
+        studentBeanList=dbAdapter.getAllStudentByBranchYear(branch, year);
+
+        for(StudentBean studentBean : studentBeanList)
         {
-            String users = " Name : " + studentBean.getStudent_firstname()+ studentBean.getStudent_lastname();
+            String users = studentBean.getStudent_firstname()+","+studentBean.getStudent_lastname();
 
-            studentlist.add(users);
+            studentList.add(users);
             Log.d("users: ", users);
 
         }
 
-        listAdapter = new ArrayAdapter<String>(this, R.layout.activity_view_faculty, R.id.labelF, studentlist);
+        listAdapter = new ArrayAdapter<String>(this, R.layout.activity_view_student, R.id.label, studentList);
         listView.setAdapter( listAdapter );
 
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 
             @Override
-            public boolean onItemLongClick(AdapterView<?> arg0, View arg1, final int position, long arg3) {
+            public boolean onItemLongClick(AdapterView<?> arg0, View arg1,final int position, long arg3) {
 
 
 
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ViewStudentActivity.this);
 
                 alertDialogBuilder.setTitle(getTitle()+"decision");
-                alertDialogBuilder.setMessage("Want to delete ?");
+                alertDialogBuilder.setMessage("Are you sure?");
 
                 alertDialogBuilder.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,int id) {
 
-                        studentlist.remove(position);
+                        studentList.remove(position);
                         listAdapter.notifyDataSetChanged();
                         listAdapter.notifyDataSetInvalidated();
 
-                        dbAdapter.deleteFaculty(studentBeanlist.get(position).getStudent_id());
-                        studentBeanlist=dbAdapter.getAllStudent();
+                        dbAdapter.deleteStudent(studentBeanList.get(position).getStudent_id());
+                        studentBeanList=dbAdapter.getAllStudentByBranchYear(branch, year);
 
-//                        for(FacultyBean facultyBean : facultyBeanList)
+//                        for(StudentBean studentBean : studentBeanList)
 //                        {
-//                            String users = " FirstName: " + facultyBean.getFaculty_firstname()+"\nLastname:"+facultyBean.getFaculty_lastname();
-//                            facultyList.add(users);
+//                            String users = " FirstName: " + studentBean.getStudent_firstname()+"\nLastname:"+studentBean.getStudent_lastname();
+//                            studentList.add(users);
 //                            Log.d("users: ", users);
 //
 //                        }
-
                     }
 
                 });
+
                 alertDialogBuilder.setNegativeButton("No",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,int id) {
                         // cancel the alert box and put a Toast to the user
