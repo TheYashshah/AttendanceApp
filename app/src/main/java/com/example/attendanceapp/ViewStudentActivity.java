@@ -63,7 +63,7 @@ public class ViewStudentActivity extends AppCompatActivity {
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ViewStudentActivity.this);
 
                 alertDialogBuilder.setTitle(getTitle()+"decision");
-                alertDialogBuilder.setMessage("Are you sure?");
+                alertDialogBuilder.setMessage("you Want to Delete ?");
 
                 alertDialogBuilder.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,int id) {
