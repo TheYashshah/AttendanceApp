@@ -37,7 +37,8 @@ public class ViewFacultyActivity extends AppCompatActivity {
 
         for(FacultyBean facultyBean : facultyBeanList)
         {
-            String faculty = " Name : " + facultyBean.getFaculty_firstname()+ facultyBean.getFaculty_lastname();
+            String faculty = " Name : " + facultyBean.getFaculty_firstname() + " " + facultyBean.getFaculty_lastname() +
+                    "\n Mobile No : " + facultyBean.getFaculty_mobilenumber() ;
 
             facultyList.add(faculty);
             Log.d("faculty: ", faculty);
@@ -52,12 +53,10 @@ public class ViewFacultyActivity extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> arg0, View arg1, final int position, long arg3) {
 
-
-
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ViewFacultyActivity.this);
 
-                alertDialogBuilder.setTitle(getTitle()+"decision");
-                alertDialogBuilder.setMessage("Want to delete ?");
+                alertDialogBuilder.setTitle(getTitle());
+                alertDialogBuilder.setMessage("Are you sure you want to delete?");
 
                 alertDialogBuilder.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,int id) {

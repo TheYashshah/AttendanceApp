@@ -40,11 +40,11 @@
             android:id="@+id/editTextFirstName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
             android:layout_below="@+id/textViewFirstName"
+            android:layout_alignParentLeft="true"
             android:ems="10"
             android:hint="First Name"
-            android:inputType="textPersonName" />
+            android:inputType="textCapWords" />
 
         <TextView
             android:id="@+id/textViewLastName"
@@ -65,7 +65,7 @@
             android:layout_below="@+id/textViewLastName"
             android:ems="10"
             android:hint="Last Name"
-            android:inputType="textPersonName" />
+            android:inputType="textCapWords" />
 
         <TextView
             android:id="@+id/textViewPhone"
@@ -84,6 +84,7 @@
             android:layout_below="@+id/textViewPhone"
             android:layout_centerHorizontal="true"
             android:ems="10"
+            android:maxLength="10"
             android:hint="Contact No"
             android:inputType="phone" />
 
@@ -103,9 +104,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/textViewUserName"
-            android:layout_alignParentRight="true"
             android:ems="10"
-            android:hint="Enrollment" />
+            android:maxLength="12"
+            android:hint="Enrollment"
+            android:inputType="number" />
+
+<!--        <EditText-->
+<!--            android:id="@+id/editTextaddr"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_below="@+id/textViewUserName"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:ems="10"-->
+<!--            android:hint="Enrollment" />-->
 
 
         <TextView

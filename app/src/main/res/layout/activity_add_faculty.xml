@@ -38,7 +38,7 @@
             android:layout_alignParentLeft="true"
             android:ems="10"
             android:hint="First Name"
-            android:inputType="textPersonName" />
+            android:inputType="textCapWords" />
 
         <requestFocus />
 
@@ -61,19 +61,18 @@
             android:layout_below="@+id/textViewLastName"
             android:ems="10"
             android:hint="Last Name"
-            android:inputType="textPersonName" />
+            android:inputType="textCapWords" />
 
 
         <TextView
             android:id="@+id/textViewPhone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_alignBaseline="@+id/textViewEmail"
-            android:layout_alignRight="@+id/textViewPassword"
             android:layout_alignBottom="@+id/textViewEmail"
-            android:text="Mobileno"
-            android:textColor="@android:color/black" />
+            android:text="Mobile No"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/editTextPhone"
@@ -82,6 +81,7 @@
             android:layout_below="@+id/textViewPhone"
             android:layout_centerHorizontal="true"
             android:ems="10"
+            android:maxLength="10"
             android:hint="phone"
             android:inputType="phone" />
 
@@ -96,14 +96,23 @@
             android:text="Email Id"
             android:textColor="@android:color/black" />
 
+<!--        <EditText-->
+<!--            android:id="@+id/editTextaddr"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_below="@+id/textViewUserName"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:ems="10"-->
+<!--            android:hint="Email Id" />-->
+
         <EditText
             android:id="@+id/editTextaddr"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/textViewUserName"
-            android:layout_alignParentRight="true"
             android:ems="10"
-            android:hint="Email Id" />
+            android:hint="Email Id"
+            android:inputType="textEmailAddress" />
 
         <TextView
             android:id="@+id/textView1"

@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View view) {
                         Intent intent =new Intent(MainActivity.this,AddStudentActivity.class);
                         startActivity(intent);
-                        Toast.makeText(MainActivity.this, "Add stundet Side...", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Adding stundet ...", Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View view) {
                         Intent intent =new Intent(MainActivity.this,AddFacultyActivity.class);
                         startActivity(intent);
-                        Toast.makeText(MainActivity.this, "Add Teacher Side...", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Adding Teacher ...", Toast.LENGTH_SHORT).show();
                     }
                 });
 

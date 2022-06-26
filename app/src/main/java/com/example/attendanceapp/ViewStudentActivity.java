@@ -43,7 +43,8 @@ public class ViewStudentActivity extends AppCompatActivity {
 
         for(StudentBean studentBean : studentBeanList)
         {
-            String users = studentBean.getStudent_firstname()+","+studentBean.getStudent_lastname();
+            String users = " Name : " + studentBean.getStudent_firstname() + " " + studentBean.getStudent_lastname() +
+                    "\n Enrollment : "+ studentBean.getStudent_address();
 
             studentList.add(users);
             Log.d("users: ", users);
@@ -62,8 +63,8 @@ public class ViewStudentActivity extends AppCompatActivity {
 
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ViewStudentActivity.this);
 
-                alertDialogBuilder.setTitle(getTitle()+"decision");
-                alertDialogBuilder.setMessage("you Want to Delete ?");
+                alertDialogBuilder.setTitle(getTitle());
+                alertDialogBuilder.setMessage("Are you sure you want to delete?");
 
                 alertDialogBuilder.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,int id) {
