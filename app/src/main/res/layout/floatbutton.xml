@@ -10,7 +10,7 @@
         android:id="@+id/addstudent"
         android:layout_width="290dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_gravity="center"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:text="Add Student" />
@@ -19,7 +19,7 @@
         android:id="@+id/addteacher"
         android:layout_width="290dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_gravity="center"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:text="Add Teacher" />

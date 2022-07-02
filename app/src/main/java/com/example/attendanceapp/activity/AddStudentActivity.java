@@ -1,4 +1,4 @@
-package com.example.attendanceapp;
+package com.example.attendanceapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +15,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.attendanceapp.R;
 import com.example.attendanceapp.bean.StudentBean;
 import com.example.attendanceapp.db.DBAdapter;
 
@@ -28,7 +29,7 @@ public class AddStudentActivity extends AppCompatActivity {
     EditText textaddress;
     Spinner spinnerbranch,spinneryear;
     String userrole,branch,year;
-    private String[] branchString = new String[] { "cse"};
+    private String[] branchString = new String[] { "cse","it"};
     private String[] yearString = new String[] {"SE","TE","BE"};
 
     @Override

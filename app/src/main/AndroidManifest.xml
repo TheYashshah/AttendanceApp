@@ -4,6 +4,7 @@
     package="com.example.attendanceapp">
 
     <application
+        android:name=".context.ApplicationContext"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,28 +15,43 @@
         android:theme="@style/Theme.AttendanceApp"
         tools:targetApi="31">
         <activity
-            android:name=".ViewStudentBranchActivity"
+            android:name=".activity.AddAttandanceSessionActivity"
             android:exported="false" />
         <activity
-            android:name=".ViewStudentActivity"
+            android:name=".activity.ViewStudentByBranchYear"
             android:exported="false" />
         <activity
-            android:name=".ViewFacultyActivity"
+            android:name=".activity.ViewAttendancePerStudentActivity"
             android:exported="false" />
         <activity
-            android:name=".AddFacultyActivity"
+            android:name=".activity.ViewAttendanceByFacultyActivity"
             android:exported="false" />
         <activity
-            android:name=".AddStudentActivity"
+            android:name=".activity.ViewStudentBranchActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".activity.TestActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".activity.ViewStudentActivity"
             android:exported="false" />
         <activity
-            android:name=".LandingActivity"
+            android:name=".activity.ViewFacultyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AddFacultyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AddStudentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AddAttendanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LandingActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
@@ -44,7 +60,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".activity.MainActivity" />
     </application>
 
 </manifest>

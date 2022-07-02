@@ -1,4 +1,4 @@
-package com.example.attendanceapp;
+package com.example.attendanceapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +15,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.attendanceapp.R;
 import com.example.attendanceapp.bean.FacultyBean;
 import com.example.attendanceapp.context.ApplicationContext;
 import com.example.attendanceapp.db.DBAdapter;
@@ -44,7 +45,6 @@ public class LoginActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
                 ((TextView) arg0.getChildAt(0)).setTextColor(Color.BLACK);
                 userrole =(String) spinnerloginas.getSelectedItem();
-
             }
 
             @Override
@@ -109,7 +109,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     if(facultyBean!=null)
                     {
-                        Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                        Intent intent = new Intent(LoginActivity.this, AddAttandanceSessionActivity.class);
                         startActivity(intent);
                         ((ApplicationContext)LoginActivity.this.getApplicationContext()).setFacultyBean(facultyBean);
                         Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();

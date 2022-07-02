@@ -1,4 +1,4 @@
-package com.example.attendanceapp;
+package com.example.attendanceapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,11 +12,13 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.attendanceapp.R;
+
 public class ViewStudentBranchActivity extends AppCompatActivity {
 
     Spinner spinnerbranch,spinneryear;
     String userrole,branch,year;
-    private String[] branchString = new String[] { "cse"};
+    private String[] branchString = new String[] { "cse","it"};
     private String[] yearString = new String[] {"SE","TE","BE"};
 
     @Override

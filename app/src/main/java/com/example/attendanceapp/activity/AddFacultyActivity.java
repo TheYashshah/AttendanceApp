@@ -1,4 +1,4 @@
-package com.example.attendanceapp;
+package com.example.attendanceapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.attendanceapp.R;
 import com.example.attendanceapp.bean.FacultyBean;
 import com.example.attendanceapp.db.DBAdapter;
 
