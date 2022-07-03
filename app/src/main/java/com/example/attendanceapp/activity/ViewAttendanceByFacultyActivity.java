@@ -43,7 +43,7 @@ public class ViewAttendanceByFacultyActivity extends AppCompatActivity {
             {
                 DBAdapter dbAdapter = new DBAdapter(ViewAttendanceByFacultyActivity.this);
                 StudentBean studentBean =dbAdapter.getStudentById(attendanceBean.getAttendance_student_id());
-                users = attendanceBean.getAttendance_student_id()+".     "+studentBean.getStudent_firstname()+" "+studentBean.getStudent_lastname()+"                  "+attendanceBean.getAttendance_status();
+                users = attendanceBean.getAttendance_student_id()+".     "+studentBean.getStudent_firstname()+" "+studentBean.getStudent_lastname()+"          "+attendanceBean.getAttendance_status();
             }
             else
             {
@@ -116,11 +116,5 @@ public class ViewAttendanceByFacultyActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
 
 }

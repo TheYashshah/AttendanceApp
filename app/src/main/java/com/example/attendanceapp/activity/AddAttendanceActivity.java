@@ -49,7 +49,8 @@ public class AddAttendanceActivity extends AppCompatActivity {
 
         for(StudentBean studentBean : studentBeanList)
         {
-            String users = studentBean.getStudent_firstname()+","+studentBean.getStudent_lastname();
+            String users = "Name :- " + studentBean.getStudent_firstname() + studentBean.getStudent_lastname() +
+                    "\nEnrollment :- " + studentBean.getStudent_address();
 
             studentList.add(users);
             Log.d("users: ", users);
@@ -120,10 +121,4 @@ public class AddAttendanceActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
 }

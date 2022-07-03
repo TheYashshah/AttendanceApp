@@ -236,8 +236,7 @@ public class AddAttandanceSessionActivity extends AppCompatActivity {
         return new DatePickerDialog(this, datePickerListener, dyear, month, day);
     }
     private DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
-        public void onDateSet(DatePicker view, int selectedYear,
-                              int selectedMonth, int selectedDay) {
+        public void onDateSet(DatePicker view, int selectedYear,int selectedMonth, int selectedDay) {
             dateEditText.setText(selectedDay + " / " + (selectedMonth + 1) + " / "
                     + selectedYear);
         }

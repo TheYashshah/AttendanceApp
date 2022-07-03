@@ -165,6 +165,7 @@
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="26dp"
             android:layout_marginTop="51dp"
+            android:background="@drawable/roundedbutton"
             android:text="submit" />
 
         <Button
@@ -175,6 +176,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="18dp"
             android:text="cancel"
+            android:background="@drawable/roundedbutton"
             android:textColor="@android:color/white" />
 
         <TextView

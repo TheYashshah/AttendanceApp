@@ -80,10 +80,9 @@ public class LoginActivity extends AppCompatActivity {
                     }
                     else
                     {
-                        if(user_name.equals("admin") & pass_word.equals("admin123")){
+                        if(user_name.equals("admin") & pass_word.equals("admin")){
                             Intent intent =new Intent(LoginActivity.this,MainActivity.class);
                             startActivity(intent);
-                            finish();
                             Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();
                         }else{
                             Toast.makeText(getApplicationContext(), "Login failed", Toast.LENGTH_SHORT).show();
