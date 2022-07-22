@@ -33,7 +33,7 @@ public class TestActivity extends AppCompatActivity {
 
                 attendanceSessionBean.setAttendance_session_faculty_id(1);
                 attendanceSessionBean.setAttendance_session_department("CSE");
-                attendanceSessionBean.setAttendance_session_class("BE");
+                attendanceSessionBean.setAttendance_session_class("TY");
                 attendanceSessionBean.setAttendance_session_date("06/04/2016");
                 attendanceSessionBean.setAttendance_session_subject("DataBase");
 

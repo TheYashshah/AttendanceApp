@@ -19,7 +19,7 @@ public class ViewStudentBranchActivity extends AppCompatActivity {
     Spinner spinnerbranch,spinneryear;
     String userrole,branch,year;
     private String[] branchString = new String[] { "cse","it"};
-    private String[] yearString = new String[] {"SE","TE","BE"};
+    private String[] yearString = new String[] {"FY","SY","TY"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

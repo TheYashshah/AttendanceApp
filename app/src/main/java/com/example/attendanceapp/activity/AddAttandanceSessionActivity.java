@@ -46,7 +46,7 @@ public class AddAttandanceSessionActivity extends AppCompatActivity {
     String subject = "DS";
 
     private String[] branchString = new String[] {"cse","it"};
-    private String[] yearString = new String[] {"SE","TE","BE"};
+    private String[] yearString = new String[] {"FY","SY","TY"};
     private String[] subjectSEString = new String[] {"DS","DBMS"};
     private String[] subjectTEString = new String[] {"OS","CN"};
     private String[] subjectBEString = new String[] {"AI","MAD"};

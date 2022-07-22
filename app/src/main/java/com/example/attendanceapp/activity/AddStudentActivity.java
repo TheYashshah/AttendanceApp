@@ -29,8 +29,8 @@ public class AddStudentActivity extends AppCompatActivity {
     EditText textaddress;
     Spinner spinnerbranch,spinneryear;
     String userrole,branch,year;
-    private String[] branchString = new String[] { "cse","it"};
-    private String[] yearString = new String[] {"SE","TE","BE"};
+    private String[] branchString = new String[] { "cse","it",};
+    private String[] yearString = new String[] {"FY","SY","TY"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
